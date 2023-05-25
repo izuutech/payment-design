@@ -1,7 +1,72 @@
+.giMain {
+  margin-top: 20px;
+  width: 100%;
+}
 .giBox {
   width: 100%;
   display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.summary {
+  font-size: 12px;
+  color: rgb(190, 193, 193);
+  font-weight: 600;
+}
+.giLeft {
+  width: 50%;
 }
 .giRight {
+  width: 50%;
   border: solid 0.5px rgb(156, 156, 163);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5%;
+  box-sizing: border-box;
+}
+
+.inpcvv {
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+.giInp {
+  width: 40%;
+  height: 80%;
+  margin-left: 30%;
+  background-color: white;
+  border: none;
+  /* height: 100%; */
+  outline: none;
+  color: black;
+  display: flex;
+  align-self: center;
+  /*justify-content: center;
+  align-items: center; */
+}
+.giRightNoBox {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.expInp {
+  width: 45%;
+  outline: none;
+  border: 0.5px solid rgb(156, 156, 163);
+  border-radius: 10px;
+  padding: 15px 5px;
+  background-color: white;
+  color: black;
+}
+.slash {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
 }

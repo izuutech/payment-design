@@ -49,6 +49,7 @@ function App() {
             </div>
             <CardInput />
             <GroupInputs />
+            <div className="btn">Pay Now</div>
           </div>
         </div>
       </div>
