@@ -38,7 +38,7 @@
   width: 40%;
   height: 80%;
   margin-left: 30%;
-  background-color: white;
+  background-color: transparent;
   border: none;
   /* height: 100%; */
   outline: none;
@@ -48,6 +48,7 @@
   /*justify-content: center;
   align-items: center; */
 }
+
 .giRightNoBox {
   width: 50%;
   display: flex;
@@ -63,6 +64,14 @@
   padding: 15px 5px;
   background-color: white;
   color: black;
+}
+.borderFocus {
+  border: solid 1px rgb(12, 167, 245);
+  transition: 1s;
+  background-color: rgba(8, 181, 244, 0.156);
+}
+.inpFocus {
+  border: solid 1px rgb(12, 101, 245);
 }
 .slash {
   width: 10%;

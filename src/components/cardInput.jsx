@@ -3,17 +3,12 @@ import master from "../../public/mc.png";
 import { MdVerified } from "react-icons/md";
 import { useEffect, useRef, useState } from "react";
 
-export default function CardInput() {
+export default function CardInput({ cardInput, setCardInput, disableInput }) {
   const first = useRef(null);
   const second = useRef(null);
   const third = useRef(null);
   const fourth = useRef(null);
-  const [cardInput, setCardInput] = useState({
-    first: "",
-    second: "",
-    third: "",
-    fourth: "",
-  });
+
   const [verified, setVerified] = useState(false);
   useEffect(() => {
     if (
@@ -67,7 +62,7 @@ export default function CardInput() {
             ref={first}
             onChange={(e) => handleChange(e, "first")}
             onKeyDown={(e) => handleInput(e, "first")}
-            pattern="[0-9]*"
+            disabled={disableInput}
           />
           <div className="dash">-</div>
           <input
@@ -79,6 +74,7 @@ export default function CardInput() {
             value={cardInput.second}
             onChange={(e) => handleChange(e, "second")}
             onKeyDown={(e) => handleInput(e, "second")}
+            disabled={disableInput}
           />
           <div className="dash">-</div>
           <input
@@ -88,6 +84,7 @@ export default function CardInput() {
             max={9999}
             ref={third}
             value={cardInput.third}
+            disabled={disableInput}
             onChange={(e) => handleChange(e, "third")}
             onKeyDown={(e) => handleInput(e, "third")}
           />
@@ -99,6 +96,7 @@ export default function CardInput() {
             max={9999}
             ref={fourth}
             value={cardInput.fourth}
+            disabled={disableInput}
             onChange={(e) => handleChange(e, "fourth")}
             onKeyDown={(e) => handleInput(e, "fourth")}
           />

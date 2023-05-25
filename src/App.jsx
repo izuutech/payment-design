@@ -9,6 +9,13 @@ import GroupInputs from "./components/groupInputs";
 import CardPreview from "./components/cardPreview";
 
 function App() {
+  const [disableInput, setDisableInput] = useState(true);
+  const [cardInput, setCardInput] = useState({
+    first: "",
+    second: "",
+    third: "",
+    fourth: "",
+  });
   const [time, setTime] = useState({
     minute: 1,
     secs: 9,
@@ -79,17 +86,28 @@ function App() {
                   Enter the 16-digit card number on the card
                 </div>
               </div>
-              <div className="headerRight">
+              <div
+                className={
+                  disableInput
+                    ? "headerRight headerRightDisable"
+                    : "headerRight"
+                }
+                onClick={() => setDisableInput(!disableInput)}
+              >
                 <HiPencil size={20} />
                 Edit
               </div>
             </div>
-            <CardInput />
-            <GroupInputs />
+            <CardInput
+              setCardInput={setCardInput}
+              cardInput={cardInput}
+              disableInput={disableInput}
+            />
+            <GroupInputs disableInput={disableInput} />
             <div className="btn">Pay Now</div>
           </div>
           <div className="right">
-            <CardPreview />
+            <CardPreview cardInput={cardInput} />
           </div>
         </div>
       </div>

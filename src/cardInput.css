@@ -8,17 +8,24 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  cursor: pointer;
+}
+.cibox:hover {
+  border: solid 0.5px rgb(35, 99, 208);
+  background-color: rgba(1, 162, 255, 0.16);
+  transition: 1s;
 }
 .ciLeft {
   display: flex;
   width: 80%;
 }
 .ciMaster {
-  width: 15%;
+  width: 10%;
   height: 40px;
   /* object-fit: contain; */
   resize: both;
 }
+
 .cardBox {
   width: 85%;
   display: flex;
@@ -27,7 +34,7 @@
 }
 .cardNo {
   width: 20%;
-  background-color: white;
+  background-color: transparent;
   border: none;
   height: 100%;
   outline: none;
@@ -46,6 +53,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+  text-align: center;
 }
 .dash {
   font-weight: 20px;

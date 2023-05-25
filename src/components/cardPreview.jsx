@@ -5,7 +5,7 @@ import chip from "../../public/chip.png";
 import order from "../../public/order.png";
 import { AiOutlineWifi } from "react-icons/ai";
 
-export default function CardPreview() {
+export default function CardPreview({ cardInput }) {
   return (
     <div className="cpbox">
       <div className="blueLine"></div>
@@ -20,7 +20,7 @@ export default function CardPreview() {
           <div className="pass"></div>
           <div className="pass"></div>
           <div className="pass"></div>
-          <div className="cardData">3456</div>
+          <div className="cardData">{cardInput.fourth}</div>
         </div>
         <div className="bottomCard">
           <div className="date">09/22</div>
