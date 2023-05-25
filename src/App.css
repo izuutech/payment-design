@@ -115,6 +115,8 @@
 }
 .right {
   width: 30%;
+  position: relative;
+  margin-top: 140px;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
