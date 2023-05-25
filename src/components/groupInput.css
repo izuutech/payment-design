@@ -1,0 +1,7 @@
+.giBox {
+  width: 100%;
+  display: flex;
+}
+.giRight {
+  border: solid 0.5px rgb(156, 156, 163);
+}

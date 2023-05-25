@@ -1,0 +1,63 @@
+.cibox {
+  width: 100%;
+  display: flex;
+  border: solid 0.5px rgb(203, 192, 192);
+  border-radius: 10px;
+  padding: 10px 2%;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.ciLeft {
+  display: flex;
+  width: 80%;
+}
+.ciMaster {
+  width: 15%;
+  height: 40px;
+  /* object-fit: contain; */
+  resize: both;
+}
+.cardBox {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardNo {
+  width: 20%;
+  background-color: white;
+  border: none;
+  height: 100%;
+  outline: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.dash {
+  font-weight: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6.5%;
+}
+.verfiyBox {
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  background-color: rgb(35, 99, 208);
+}
