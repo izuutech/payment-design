@@ -13,7 +13,7 @@ export default function GroupInputs() {
         </div>
         <div className="giRight">
           <div className="inpcvv">
-            <input className="giInp" type="number" />
+            <input className="giInp" type="number" max={999} />
           </div>
           <CgMenuGridR size={25} color="grey" />
         </div>
@@ -24,9 +24,9 @@ export default function GroupInputs() {
           <div className="summary">Enter the expiration date of the card</div>
         </div>
         <div className="giRightNoBox">
-          <input className="expInp" type="number" />
+          <input className="expInp" type="number" max={99} />
           <div className="slash">/</div>
-          <input className="expInp" type="number" />
+          <input className="expInp" type="number" max={99} />
         </div>
       </div>
       <div className="giBox">

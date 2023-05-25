@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -9,7 +9,35 @@ import GroupInputs from "./components/groupInputs";
 import CardPreview from "./components/cardPreview";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [time, setTime] = useState({
+    minute: 1,
+    secs: 9,
+  });
+
+  // useEffect(() => {
+  //   let interval = setInterval(() => {
+
+  //     if (time.secs <= 0 && time.minute > 0) {
+  //       setTime((prev) => ({
+  //         ...time,
+  //         minute: prev.minute - 1,
+  //         secs: 59,
+  //       }));
+  //     } else if (time.secs === 0 && time.minute === 0) {
+  //       setTime({
+  //         minute: 2,
+  //         secs: 0,
+  //       });
+  //     } else if (time.secs > 0) {
+  //       setTime((prev) => ({ ...time, secs: prev.secs - 1 }));
+  //     } else {
+  //       setTime({ ...time, secs: 59 });
+  //     }
+  //   }, 1000);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -30,10 +58,18 @@ function App() {
               </div>
               <div className="timer">
                 <div className="timebox">0</div>
-                <div className="timebox">1</div>
+                <div className="timebox">{time.minute}</div>
                 <div className="colon">:</div>
-                <div className="timebox">2</div>
-                <div className="timebox">9</div>
+                <div className="timebox">
+                  {time.secs.toString().length > 1
+                    ? time.secs.toString().charAt(0)
+                    : 0}
+                </div>
+                <div className="timebox">
+                  {time.secs.toString().length === 2
+                    ? time.secs.toString().charAt(1)
+                    : time.secs}
+                </div>
               </div>
             </div>
             <div className="header">
