@@ -7,6 +7,7 @@ import { HiPencil } from "react-icons/hi";
 import CardInput from "./components/cardInput";
 import GroupInputs from "./components/groupInputs";
 import CardPreview from "./components/cardPreview";
+import { creditCard } from "./assets/credit-cards.png";
 
 function App() {
   const [disableInput, setDisableInput] = useState(true);
@@ -52,7 +53,7 @@ function App() {
             <div className="logoTopBox">
               <div className="logobox">
                 <div className="imgbox">
-                  <img src="/public/credit-cards.png" className="logo" />
+                  <img src={creditCard} className="logo" />
                 </div>
                 <span className="h1">
                   AceCoin<span className="h1pay">Pay</span>
