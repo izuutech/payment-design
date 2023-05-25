@@ -53,7 +53,7 @@ function App() {
             <div className="logoTopBox">
               <div className="logobox">
                 <div className="imgbox">
-                  <img src={creditCard} className="logo" />
+                  <img src="/credit-cards.png" className="logo" />
                 </div>
                 <span className="h1">
                   AceCoin<span className="h1pay">Pay</span>
