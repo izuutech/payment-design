@@ -1,5 +1,5 @@
 import "../cardInput.css";
-import master from "../../public/mc.png";
+import master from "../assets/mc.png";
 import { MdVerified } from "react-icons/md";
 import { BsFillCreditCard2FrontFill } from "react-icons/bs";
 import { useEffect, useRef, useState } from "react";

@@ -16,35 +16,30 @@ function App() {
     third: "",
     fourth: "",
   });
-  const [time, setTime] = useState({
-    minute: 1,
-    secs: 9,
-  });
+  const [submitting, setSubmitting] = useState(false);
+  const [seconds, setSeconds] = useState(120);
 
-  // useEffect(() => {
-  //   let interval = setInterval(() => {
+  useEffect(() => {
+    let interval = null;
 
-  //     if (time.secs <= 0 && time.minute > 0) {
-  //       setTime((prev) => ({
-  //         ...time,
-  //         minute: prev.minute - 1,
-  //         secs: 59,
-  //       }));
-  //     } else if (time.secs === 0 && time.minute === 0) {
-  //       setTime({
-  //         minute: 2,
-  //         secs: 0,
-  //       });
-  //     } else if (time.secs > 0) {
-  //       setTime((prev) => ({ ...time, secs: prev.secs - 1 }));
-  //     } else {
-  //       setTime({ ...time, secs: 59 });
-  //     }
-  //   }, 1000);
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, []);
+    if (seconds > 0) {
+      interval = setInterval(() => {
+        setSeconds((prevSeconds) => prevSeconds - 1);
+      }, 1000);
+    } else {
+      clearInterval(interval);
+    }
+
+    return () => clearInterval(interval);
+  }, [seconds]);
+
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    return `${minutes.toString().padStart(2, "0")}:${seconds
+      .toString()
+      .padStart(2, "0")}`;
+  };
 
   return (
     <>
@@ -64,19 +59,11 @@ function App() {
                 </span>
               </div>
               <div className="timer">
-                <div className="timebox">0</div>
-                <div className="timebox">{time.minute}</div>
+                <div className="timebox">{formatTime(seconds)[0]}</div>
+                <div className="timebox">{formatTime(seconds)[1]}</div>
                 <div className="colon">:</div>
-                <div className="timebox">
-                  {time.secs.toString().length > 1
-                    ? time.secs.toString().charAt(0)
-                    : 0}
-                </div>
-                <div className="timebox">
-                  {time.secs.toString().length === 2
-                    ? time.secs.toString().charAt(1)
-                    : time.secs}
-                </div>
+                <div className="timebox">{formatTime(seconds)[3]}</div>
+                <div className="timebox">{formatTime(seconds)[4]}</div>
               </div>
             </div>
             <div className="header">
@@ -104,7 +91,14 @@ function App() {
               disableInput={disableInput}
             />
             <GroupInputs disableInput={disableInput} />
-            <div className="btn">Pay Now</div>
+            <div
+              className="btn"
+              onClick={() => {
+                setSubmitting(!submitting);
+              }}
+            >
+              {submitting ? <div className="loading-spinner"></div> : "Pay Now"}
+            </div>
           </div>
           <div className="right">
             <CardPreview cardInput={cardInput} />

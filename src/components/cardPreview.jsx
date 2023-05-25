@@ -1,8 +1,8 @@
 import "./cardPreview.css";
-import apple from "../../public/apple.png";
-import mastercard from "../../public/mc.png";
-import chip from "../../public/chip.png";
-import order from "../../public/order.png";
+import apple from "../assets/apple.png";
+import mastercard from "../assets/mc.png";
+import chip from "../assets/chip.png";
+import order from "../assets/order.png";
 import { AiOutlineWifi } from "react-icons/ai";
 
 export default function CardPreview({ cardInput }) {

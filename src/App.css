@@ -45,7 +45,10 @@
   border-radius: 50px;
 }
 .logo {
-  width: 90%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
   aspect-ratio: 1;
   object-fit: cover;
   /* height: 0px; */
@@ -126,6 +129,23 @@
   transition: 0.5s;
   background-color: rgb(42, 172, 237);
 }
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  /* width: 20px;
+  height: 20px; */
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid rgb(4, 162, 241); /* Black */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
 .right {
   width: 30%;
   position: relative;
