@@ -19,6 +19,7 @@
 }
 .box {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 .left {
@@ -134,5 +135,19 @@
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .box {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+  }
+  .right {
+    width: 40%;
+    margin-top: 200px;
+    margin-left: 30%;
   }
 }

@@ -4,13 +4,14 @@
 }
 
 .mastercard {
-  position: relative;
-  /* top: 0px; */
+  position: absolute;
+  top: -150px;
   background-color: white;
   padding: 20px 10%;
   border-radius: 20px;
   box-sizing: border-box;
-  width: 100%;
+  width: 90%;
+  left: 5%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .blueLine {
@@ -180,6 +181,7 @@
 .currency {
   color: gray;
   font-weight: 200;
+  font-size: 20px;
 }
 .downRight {
   width: 40%;
