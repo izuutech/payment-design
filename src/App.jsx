@@ -7,7 +7,6 @@ import { HiPencil } from "react-icons/hi";
 import CardInput from "./components/cardInput";
 import GroupInputs from "./components/groupInputs";
 import CardPreview from "./components/cardPreview";
-import { creditCard } from "./assets/credit-cards.png";
 
 function App() {
   const [disableInput, setDisableInput] = useState(true);
