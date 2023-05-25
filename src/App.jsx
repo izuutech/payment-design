@@ -6,6 +6,7 @@ import { GrClose } from "react-icons/gr";
 import { HiPencil } from "react-icons/hi";
 import CardInput from "./components/cardInput";
 import GroupInputs from "./components/groupInputs";
+import CardPreview from "./components/cardPreview";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -50,6 +51,9 @@ function App() {
             <CardInput />
             <GroupInputs />
             <div className="btn">Pay Now</div>
+          </div>
+          <div className="right">
+            <CardPreview />
           </div>
         </div>
       </div>

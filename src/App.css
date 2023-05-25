@@ -19,9 +19,10 @@
 }
 .box {
   display: flex;
+  justify-content: space-between;
 }
 .left {
-  width: 70%;
+  width: 65%;
 }
 .logoTopBox {
   display: flex;
