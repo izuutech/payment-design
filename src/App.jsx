@@ -88,7 +88,7 @@ function App() {
               </div>
               <div
                 className={
-                  disableInput
+                  !disableInput
                     ? "headerRight headerRightDisable"
                     : "headerRight"
                 }

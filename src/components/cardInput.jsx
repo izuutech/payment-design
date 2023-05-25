@@ -1,6 +1,7 @@
 import "../cardInput.css";
 import master from "../../public/mc.png";
 import { MdVerified } from "react-icons/md";
+import { BsFillCreditCard2FrontFill } from "react-icons/bs";
 import { useEffect, useRef, useState } from "react";
 
 export default function CardInput({ cardInput, setCardInput, disableInput }) {
@@ -10,7 +11,13 @@ export default function CardInput({ cardInput, setCardInput, disableInput }) {
   const fourth = useRef(null);
 
   const [verified, setVerified] = useState(false);
+  const [isMasterCard, setIsMasterCard] = useState(false);
   useEffect(() => {
+    if (cardInput.first.length === 4) {
+      setIsMasterCard(true);
+    } else {
+      setIsMasterCard(false);
+    }
     if (
       cardInput.first.length === 4 &&
       cardInput.second.length === 4 &&
@@ -51,7 +58,11 @@ export default function CardInput({ cardInput, setCardInput, disableInput }) {
   return (
     <div className="cibox">
       <div className="ciLeft">
-        <img src={master} className="ciMaster" />
+        {isMasterCard ? (
+          <img src={master} className="ciMaster" />
+        ) : (
+          <BsFillCreditCard2FrontFill size={30} />
+        )}
         <div className="cardBox">
           <input
             type="number"
